@@ -27,11 +27,9 @@ public class Win {
     public static boolean check(int[][] board) {
         boolean win = false;
         for (int i = 0; i < board.length; i++) {
-            if (board[i][i] == 1) {
-                if (winHorizontal(board, i) || winVertical(board, i)) {
+            if (board[i][i] == 1 && (winHorizontal(board, i) || winVertical(board, i))) {
                     win = true;
                     break;
-                }
             }
         }
         return win;
